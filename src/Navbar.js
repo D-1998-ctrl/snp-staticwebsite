@@ -284,9 +284,18 @@ const Navbar = () => {
 
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 {/* <Button sx={{ color: 'black', marginLeft: 'auto' }}>Log In</Button> */}
-                <Button component={Link} to="/login" sx={{ color: 'black', marginLeft: 'auto' }}>
+                {/* <Button component={Link} to="/login" sx={{ color: 'black', marginLeft: 'auto' }}>
                   Log In
-                </Button>
+                </Button> */}
+                <Button
+  component="a"
+  href="https://www.snptaxes.com/login"
+  sx={{ color: 'black', marginLeft: 'auto' }}
+  target="_self" // optional: open in same tab
+>
+  Log In
+</Button>
+
 
                 <Button variant="outlined" sx={{ marginLeft: 2 }}>
                   Start Free Trial

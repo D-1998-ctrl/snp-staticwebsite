@@ -44,13 +44,22 @@ import Login from './pages/Login';
 
 const Layout = ({ children }) => {
   const location = useLocation();
+  const validRoutes = [
+    '/',
+    '/product/overview',
+    '/Integrations/overview',
+    '/pricing',
+    '/Resources/upcoming-updates',
+    '/Aboutus/whyweexist'
+  ];
+  
+  const shouldShowNavAndFooter = validRoutes.includes(location.pathname);
   
   return (
     <>
-      {/* Conditionally render Navbar and Footer based on the current path */}
-      {location.pathname !== '/login' && <Navbar />}
+      {shouldShowNavAndFooter && <Navbar />}
       {children}
-      {location.pathname !== '/login' && <Footer />}
+      {shouldShowNavAndFooter && <Footer />}
     </>
   );
 };
